@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 function App() {
   const [page, setPage] = useState(1);
   const [data, setData] = useState(null);
-  const countPerPage = 10
+  const countPerPage = 10;
 
   const clickHandler = (value) => {
     setPage((page) => page + value);
@@ -21,7 +21,7 @@ function App() {
         console.log(data);
         setData(data);
       } catch (error) {
-        alert('failed to fetch data');
+        alert("failed to fetch data");
       }
     };
 
@@ -32,10 +32,18 @@ function App() {
     <div className="App">
       <h1>Employee Data Table</h1>
       <div className="tableSection">
-
-      {data ? <Table data={data.slice((page-1)*countPerPage,((page-1)*countPerPage)+countPerPage)}/> : <p>Loading...</p>}
+        {data ? (
+          <Table
+            data={data.slice(
+              (page - 1) * countPerPage,
+              (page - 1) * countPerPage + countPerPage
+            )}
+          />
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
-      
+
       <button
         onClick={() => {
           if (page !== 1) {
@@ -45,10 +53,10 @@ function App() {
       >
         Previous
       </button>
-      <div className="circle">{page}</div>
+      <h6 className="circle">{page}</h6>
       <button
         onClick={() => {
-          if (page !== Math.ceil(data.length/10)) {
+          if (page !== Math.ceil(data.length / 10)) {
             clickHandler(1);
           }
         }}
