@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+.tableSection{
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  background-color: lightseagreen;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  margin: 15px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+}
+
+.circle{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
