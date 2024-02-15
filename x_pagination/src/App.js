@@ -53,7 +53,7 @@ function App() {
       >
         Previous
       </button>
-      <span className="circle"><div>{page}</div> </span>
+      <span className="circle">{page} </span>
       <button
         onClick={() => {
           if (page !== Math.ceil(data.length / 10)) {
