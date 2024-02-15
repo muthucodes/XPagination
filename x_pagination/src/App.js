@@ -21,7 +21,7 @@ function App() {
         console.log(data);
         setData(data);
       } catch (error) {
-        console.log(error);
+        alert('failed to fetch data');
       }
     };
 
@@ -45,7 +45,7 @@ function App() {
       >
         Previous
       </button>
-      <button className="circle">{page}</button>
+      <div className="circle">{page}</div>
       <button
         onClick={() => {
           if (page !== Math.ceil(data.length/10)) {
